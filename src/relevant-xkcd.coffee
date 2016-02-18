@@ -17,7 +17,7 @@
 module.exports = (robot) ->
   robot.respond /relevant xkcd\s+(.+)/i, (msg) ->
     phrase = msg.match[1]
-
+    
     # Get a relevant XKCD by phrase
     msg.http("https://relevantxkcd.appspot.com/process?action=xkcd&query=#{phrase}")
     .get() (err, res, body) ->
@@ -25,9 +25,9 @@ module.exports = (robot) ->
         msg.send 'An error has occurred. Is https://relevantxkcd.appspot.com/ up?'
       else
         # Extract appropriate data from response
-        responseData = body.match(/(0.\d+) 0 (\d+) .*/i)
-        percentageCertainty = responseData[1]
-        comicNumber = "#{responseData[2]}"
+        responseData = body.split(' ')
+        percentageCertainty = responseData[0]
+        comicNumber = parseInt(responseData[2], 10)
 
         # Get the comic details from XKCD
         msg.http("http://xkcd.com/#{comicNumber}/info.0.json")
