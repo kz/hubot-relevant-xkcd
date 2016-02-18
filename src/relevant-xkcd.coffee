@@ -27,7 +27,7 @@ module.exports = (robot) ->
         # Extract appropriate data from response
         responseData = body.split(' ')
         percentageCertainty = responseData[0]
-        comicNumber = responseData[2]
+        comicNumber = parseInt(responseData[2], 10)
 
         # Get the comic details from XKCD
         msg.http("http://xkcd.com/#{comicNumber}/info.0.json")
