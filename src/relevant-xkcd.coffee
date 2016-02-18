@@ -16,10 +16,10 @@
 
 module.exports = (robot) ->
   robot.respond /relevant xkcd\s+(.+)/i, (msg) ->
-    phrase = "#{msg.match[1]}"
+    phrase = msg.match[1]
 
     # Get a relevant XKCD by phrase
-    msg.http("https://relevantxkcd.appspot.com/process?action=xkcd&query=#phrase")
+    msg.http("https://relevantxkcd.appspot.com/process?action=xkcd&query=#{phrase}")
     .get() (err, res, body) ->
       if res.statusCode != 200
         msg.send 'An error has occurred. Is https://relevantxkcd.appspot.com/ up?'
