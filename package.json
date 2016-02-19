@@ -1,28 +1,21 @@
 {
   "name": "hubot-relevant-xkcd",
   "description": "Find a relevant XKCD for a phrase",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Kelvin Zhang <me@iamkelv.in>",
   "license": "MIT",
-
   "keywords": "hubot, hubot-scripts, xkcd, relevant",
-
   "repository": {
     "type": "git",
     "url": "git://github.com/hubot-scripts/hubot-relevant-xkcd.git"
   },
-
   "bugs": {
     "url": "https://github.com/hubot-scripts/hubot-relevant-xkcd/issues"
   },
-
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "peerDependencies": {
     "hubot": "2.x"
   },
-
   "devDependencies": {
     "chai": "^2.1.1",
     "coffee-script": "1.6.3",
@@ -37,9 +30,7 @@
     "sinon": "^1.13.0",
     "sinon-chai": "^2.7.0"
   },
-
   "main": "index.coffee",
-
   "scripts": {
     "test": "grunt test"
   }
