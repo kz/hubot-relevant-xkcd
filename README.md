@@ -23,6 +23,8 @@ Then add **hubot-relevant-xkcd** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-user1>> hubot hello
-hubot>> hello!
+user>> hubot relevant xkcd compiling
+hubot>> Compiling
+http://imgs.xkcd.com/comics/compiling.png
+'Are you stealing those LCDs?' 'Yeah, but I'm doing it while my code compiles.'
 ```
