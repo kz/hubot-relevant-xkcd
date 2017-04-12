@@ -1,7 +1,7 @@
 {
   "name": "hubot-relevant-xkcd",
   "description": "Find a relevant XKCD for a phrase",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Kelvin Zhang <me@iamkelv.in>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts, xkcd, relevant",
