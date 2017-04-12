@@ -30,7 +30,7 @@ module.exports = (robot) ->
         comicNumber = parseInt(responseData[2], 10)
 
         # Get the comic details from XKCD
-        msg.http("http://xkcd.com/#{comicNumber}/info.0.json")
+        msg.http("https://xkcd.com/#{comicNumber}/info.0.json")
         .get() (err, res, body) ->
           if res.statusCode == 404
             msg.send 'Comic #{num} not found.'
